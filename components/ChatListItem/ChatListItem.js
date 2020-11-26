@@ -1,30 +1,47 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableWithoutFeedback,
+  Alert,
+} from "react-native";
 import moment from "moment";
 // import ChatRooms from "../../data/ChatRoom";
+import { useNavigation } from "@react-navigation/native";
 
 const ChatListItem = ({ chatRoom }) => {
   // const { chatRoom } = props;
+  // onPress={() => navigation.navigate("ChatRoomScreen")}
+
+  const onPressChats = () => {
+    navigation.navigate("ChatRoomScreen", { id: chatRoom.id });
+  };
 
   const user = chatRoom.users[1];
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.leftContainer}>
-        <Image source={{ uri: user.imageUri }} style={styles.avatar} />
+  const navigation = useNavigation();
 
-        <View style={styles.midContainer}>
-          <Text style={styles.username}>{user.name}</Text>
-          <Text numberOfLines={1} style={styles.lastMessage}>
-            {chatRoom.lastMessage.content}
-          </Text>
+  return (
+    <TouchableWithoutFeedback onPress={onPressChats}>
+      <View style={styles.container}>
+        <View style={styles.leftContainer}>
+          <Image source={{ uri: user.imageUri }} style={styles.avatar} />
+
+          <View style={styles.midContainer}>
+            <Text style={styles.username}>{user.name}</Text>
+            <Text numberOfLines={1} style={styles.lastMessage}>
+              {chatRoom.lastMessage.content}
+            </Text>
+          </View>
         </View>
+        <Text style={styles.time}>
+          {moment(chatRoom.lastMessage.createAt).format("DD/MM/YYYY")}
+        </Text>
+        {/* <Text style={styles.time}>Yesterday</Text> */}
       </View>
-      <Text style={styles.time}>
-        {moment(chatRoom.lastMessage.createAt).format("DD/MM/YYYY")}
-      </Text>
-      {/* <Text style={styles.time}>Yesterday</Text> */}
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 

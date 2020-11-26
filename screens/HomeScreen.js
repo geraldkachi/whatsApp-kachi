@@ -1,35 +1,35 @@
 import React from "react";
 import { StyleSheet, Text, View, StatusBar } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import SettingScreen from "../screens/SettingScreen";
-import BottomTabScreen from "./BottomTabScreen";
+// import SettingScreen from "../screens/SettingScreen";
+// import BottomTabScreen from "./BottomTabScreen";
 import TopTabScreen from "./TopTabScreen";
-
 // import Colors from "../constants/Colors";
+
+// import ChatRoomScreen from "../screens/ChatRoomScreen";
 
 const HomeStack = createStackNavigator();
 
-const HomeScreen = ({ navigation }) => (
-  <HomeStack.Navigator
-    screenOptions={{
-      headerStyle: {},
-    }}
-  >
-    <HomeStack.Screen
-      name="TopTab"
-      component={TopTabScreen}
-      options={{
-        headerStyle: {},
-      }}
-    />
-    <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />
-    <HomeStack.Screen name="Setting" component={SettingScreen} />
-  </HomeStack.Navigator>
-);
+const HomeScreen = () => {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="TopTab"
+        component={TopTabScreen}
+        options={{
+          headerStyle: {},
+        }}
+      />
+    </HomeStack.Navigator>
+  );
+};
 
 export default HomeScreen;
 
 const styles = StyleSheet.create({});
+
+//   <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />
+// <HomeStack.Screen name="Setting" component={SettingScreen} />
 
 // const [] = React.useState
 
