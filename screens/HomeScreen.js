@@ -5,21 +5,27 @@ import SettingScreen from "../screens/SettingScreen";
 import BottomTabScreen from "./BottomTabScreen";
 import TopTabScreen from "./TopTabScreen";
 
+// import Colors from "../constants/Colors";
+
 const HomeStack = createStackNavigator();
 
 const HomeScreen = ({ navigation }) => (
-  <HomeStack.Navigator>
+  <HomeStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        // title: "WhatsApp",
+        // backgroundColor: "#075E54",
+      },
+    }}
+  >
     <HomeStack.Screen
       name="TopTab"
       component={TopTabScreen}
       options={{
         // headerTitleStyle: "",
         headerStyle: {
-          title: "WhatsApp",
-          color: "white",
-          backgroundColor: "#075E54",
+          // backgroundColor: "#075E54",
         },
-        // headerTitle: "WhatsApp",
       }}
     />
     <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />

@@ -2,24 +2,70 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
-// import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import BottomTabScreen from "./screens/BottomTabScreen";
+import Colors from "./constants/Colors";
+import { Octicons, MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
 
-const Drawer = createDrawerNavigator();
+// import { createDrawerNavigator } from "@react-navigation/drawer";
 
-// const Stack = createStackNavigator();
+// const Drawer = createDrawerNavigator();
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        initialRouteName="Home"
-        // headerMode={false}  children={HomeStack}
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: Colors.light.tint,
+            shadowOpacity: 15,
+            shadowColor: Colors.light.tint,
+            elevation: 0,
+            borderColor: "#0c6157",
+            borderBottomWidth: 0,
+            borderTopWidth: 0,
+          },
+          headerTintColor: Colors.light.background,
+          headerTitleAlign: "left",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
       >
-        <Drawer.Screen name="Home" children={HomeScreen} />
-        {/* <Drawer.Screen name="BottomTab" component={BottomTabScreen} /> */}
-      </Drawer.Navigator>
+        <Stack.Screen
+          name="Home"
+          options={{
+            title: "WhatsApp",
+            headerRight: () => (
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: 60,
+                  marginRight: 15,
+                }}
+              >
+                <Octicons
+                  name="search"
+                  size={22}
+                  color={Colors.light.background}
+                />
+                {/* <MaterialCommunityIcons */}
+                <Entypo
+                  name="dots-three-vertical"
+                  size={22}
+                  color={Colors.light.background}
+                />
+              </View>
+            ),
+          }}
+          component={HomeScreen}
+        />
+        <Stack.Screen name="BottomTab" component={BottomTabScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

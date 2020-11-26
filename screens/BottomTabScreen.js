@@ -18,17 +18,6 @@ import {
 
 const Tab = createBottomTabNavigator();
 
-{
-  /* <MaterialCommunityIcons
-  name="star-four-points-outlinr"
-  size={24}
-  color="blue"
-/>; */
-}
-{
-  /* <AntDesig name="twitter" size={24} color="blue" /> */
-}
-
 const BottomTabScreen = () => (
   <Tab.Navigator>
     <Tab.Screen
