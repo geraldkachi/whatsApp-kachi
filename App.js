@@ -22,11 +22,14 @@ const App = () => {
           headerStyle: {
             backgroundColor: Colors.light.tint,
             shadowOpacity: 15,
-            shadowColor: Colors.light.tint,
             elevation: 0,
             borderColor: "#0c6157",
             borderBottomWidth: 0,
-            borderTopWidth: 0,
+            shadowOffset: {
+              height: 0,
+            },
+
+            // borderTopWidth: 0,
           },
           headerTintColor: Colors.light.background,
           headerTitleAlign: "left",

@@ -20,9 +20,11 @@ const TopTabScreen = () => {
     <Tab.Navigator
       screenOptions={{
         headerStyle: {
-          borderBottomWidth: 0,
-          borderTopWidth: 0,
+          borderTopColor: Colors.light.tint,
+          shadowOpacity: 15,
+          elevation: 0,
           borderColor: "#0c6157",
+          borderTopWidth: 0,
         },
       }}
       tabBarOptions={{
@@ -30,8 +32,6 @@ const TopTabScreen = () => {
 
         style: {
           backgroundColor: Colors.light.tint,
-          borderBottomWidth: 0,
-          borderTopWidth: 0,
         },
         indicatorStyle: {
           backgroundColor: Colors.light.background,

@@ -12,20 +12,14 @@ const HomeStack = createStackNavigator();
 const HomeScreen = ({ navigation }) => (
   <HomeStack.Navigator
     screenOptions={{
-      headerStyle: {
-        // title: "WhatsApp",
-        // backgroundColor: "#075E54",
-      },
+      headerStyle: {},
     }}
   >
     <HomeStack.Screen
       name="TopTab"
       component={TopTabScreen}
       options={{
-        // headerTitleStyle: "",
-        headerStyle: {
-          // backgroundColor: "#075E54",
-        },
+        headerStyle: {},
       }}
     />
     <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />

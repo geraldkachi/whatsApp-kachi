@@ -1,16 +1,25 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-// import { Fontisto, FontAwesome5 } from "@expo/vector-icons";
 
 const Camera = () => {
-  return (
-    <View>
-      {/* <FontAwesome5 name="camera" size={24} color="black" /> */}
-      <Text>Camera</Text>
-    </View>
-  );
+  return <View style={styles.container}></View>;
 };
 
 export default Camera;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  flex: 1,
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+// import Camera from "react-native-camera";
+{
+  /* <Camera
+      ref={(cam)=>{
+        camera = cam
+      }}
+      style={{}}
+      aspect={Camera.constants.Aspect.fill} 
+      /> */
+}

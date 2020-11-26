@@ -1,16 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, FlatList } from "react-native";
+// import ChatListItem from "../../components/ChatListItem/ChatListItem";
+// import ChatRooms from "../../data/ChatRoom";
 
 const Chats = ({ navigation }) => {
   return (
     <View>
-      <Text>Chats</Text>
-      <Button
-        title="Go to BottoTabs"
-        onPress={() => {
-          navigation.navigate("BottomTab");
-        }}
-      />
+      {/* <FlatList
+        style={{ width: "100%" }}
+        data={ChatRooms}
+        renderItem={({ item }) => <ChatListItem chatRoom={item} />}
+        keyExtractor={(item) => item.id}
+      /> */}
     </View>
   );
 };
@@ -18,4 +19,3 @@ const Chats = ({ navigation }) => {
 export default Chats;
 
 const styles = StyleSheet.create({});
-Chats;
