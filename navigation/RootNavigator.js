@@ -1,12 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import BottomTabScreen from "../screens/BottomTabScreen";
 import Colors from "../constants/Colors";
-import { Octicons, MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
+import {
+  Octicons,
+  MaterialIcons,
+  MaterialCommunityIcons,
+  Entypo,
+  FontAwesome5,
+} from "@expo/vector-icons";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
 
 const Stack = createStackNavigator();
@@ -73,8 +79,49 @@ function RootNavigator() {
           ),
         }}
       />
-
-      <Stack.Screen name="ChatRoomScreen" component={ChatRoomScreen} />
+      {/* ////////////////////////////////////////////////////////////////////// */}
+      <Stack.Screen
+        name="ChatRoomScreen"
+        component={ChatRoomScreen}
+        options={({ route }) => ({
+          title: route.params.name,
+          headerRight: () => (
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginRight: 15,
+                width: "100%",
+              }}
+            >
+              <TouchableOpacity
+                style={{ paddingHorizontal: 2 }}
+                onPress={() => {}}
+              >
+                <FontAwesome5 name="video" size={22} color="white" />
+              </TouchableOpacity>
+              {/*  */}
+              <TouchableOpacity
+                style={{ paddingHorizontal: 2 }}
+                onPress={() => {}}
+              >
+                <MaterialIcons name="call" size={22} color="white" />
+              </TouchableOpacity>
+              {/*  */}
+              <TouchableOpacity
+                style={{ paddingHorizontal: 2 }}
+                onPress={() => {}}
+              >
+                <MaterialCommunityIcons
+                  name="dots-vertical"
+                  size={22}
+                  color="white"
+                />
+              </TouchableOpacity>
+            </View>
+          ),
+        })}
+      />
       <Stack.Screen name="BottomTab" component={BottomTabScreen} />
     </Stack.Navigator>
   );

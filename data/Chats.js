@@ -1,4 +1,4 @@
-export default {
+const chattingData = {
   id: "1",
   users: [
     {
@@ -19,7 +19,7 @@ export default {
   messages: [
     {
       id: "m1",
-      content: "How are you, Lukas!",
+      content: "How are you, Kachi!",
       createdAt: "2020-10-10T12:48:00.000Z",
       user: {
         id: "u1",
@@ -32,7 +32,7 @@ export default {
       createdAt: "2020-10-03T14:49:00.000Z",
       user: {
         id: "u2",
-        name: "Lukas",
+        name: "Kachi",
       },
     },
     {
@@ -41,7 +41,7 @@ export default {
       createdAt: "2020-10-03T14:49:40.000Z",
       user: {
         id: "u2",
-        name: "Lukas",
+        name: "Kachi",
       },
     },
     {
@@ -69,7 +69,7 @@ export default {
       createdAt: "2020-10-03T14:49:00.000Z",
       user: {
         id: "u2",
-        name: "Lukas",
+        name: "Kachi",
       },
     },
     {
@@ -84,3 +84,5 @@ export default {
     },
   ],
 };
+
+export default chattingData;

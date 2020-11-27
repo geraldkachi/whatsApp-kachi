@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, FlatList } from "react-native";
+import { StyleSheet, View, FlatList } from "react-native";
 import ChatListItem from "../../components/ChatListItem/ChatListItem";
 import ChatRooms from "../../data/ChatRoom";
 
-const Chats = ({ navigation }) => {
+const Chats = () => {
   return (
     <View>
       <FlatList
