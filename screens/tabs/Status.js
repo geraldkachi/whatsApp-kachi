@@ -8,7 +8,8 @@ const Status = ({ navigation }) => {
       <Button
         title="Go to BottoTabs"
         onPress={() => {
-          navigation.navigate("Setting");
+          navigation.navigate("BottomTab");
+          // navigation.navigate("Setting");
         }}
       />
     </View>

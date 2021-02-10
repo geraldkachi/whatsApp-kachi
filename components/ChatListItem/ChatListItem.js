@@ -17,7 +17,7 @@ const ChatListItem = ({ chatRoom }) => {
 
   const onPressChats = () => {
     navigation.navigate("ChatRoomScreen", { id: chatRoom.id, name: user.name });
-  };
+  }
 
   const user = chatRoom.users[1];
 

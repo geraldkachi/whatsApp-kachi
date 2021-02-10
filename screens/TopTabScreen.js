@@ -20,11 +20,11 @@ const TopTabScreen = () => {
     <Tab.Navigator
       screenOptions={{
         headerStyle: {
-          borderTopColor: Colors.light.tint,
+          borderTopColor: Colors.light.tintColorLight,
           shadowOpacity: 15,
           elevation: 0,
           borderColor: "#0c6157",
-          borderTopWidth: 0,
+          // borderTopWidth: 0,
         },
       }}
       tabBarOptions={{
@@ -51,7 +51,16 @@ const TopTabScreen = () => {
           ),
         }}
       />
-      <Tab.Screen name="Chats" component={ChatsStackNavigation} />
+      <Tab.Screen name="Chats" component={ChatsStackNavigation} 
+         options={{
+           headerStyle: null,
+           style:{
+             borderTopColor: "yellow"
+           }
+          // tabBarLabel: () => null,
+          // tabBarColor: "blue",
+        }}
+      />
       <Tab.Screen name="Status" component={StatusStackStackNavigation} />
       <Tab.Screen name="Calls" component={CallseStackStackNavigation} />
     </Tab.Navigator>
@@ -63,22 +72,22 @@ const ChatsStack = createStackNavigator();
 const StatusStack = createStackNavigator();
 const CallseStack = createStackNavigator();
 
-const CameraStackNavigation = ({ navigation }) => (
+const CameraStackNavigation = () => (
   <CameraStack.Navigator>
     <CameraStack.Screen name="CameraScreen" component={Camera} />
   </CameraStack.Navigator>
 );
-const ChatsStackNavigation = ({ navigation }) => (
+const ChatsStackNavigation = () => (
   <ChatsStack.Navigator>
     <ChatsStack.Screen name="ChatsScreen" component={Chats} />
   </ChatsStack.Navigator>
 );
-const StatusStackStackNavigation = ({ navigation }) => (
+const StatusStackStackNavigation = () => (
   <StatusStack.Navigator>
     <StatusStack.Screen name="StatusScreen" component={Status} />
   </StatusStack.Navigator>
 );
-const CallseStackStackNavigation = ({ navigation }) => (
+const CallseStackStackNavigation = () => (
   <CallseStack.Navigator>
     <CallseStack.Screen name="CallsScreen" component={Calls} />
   </CallseStack.Navigator>

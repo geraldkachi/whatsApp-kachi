@@ -7,7 +7,7 @@ const Chats = () => {
   return (
     <View>
       <FlatList
-        style={{ width: "100%" }}
+        style={{ width: "100%", flex: 1 }}
         data={ChatRooms}
         renderItem={({ item }) => <ChatListItem chatRoom={item} />}
         keyExtractor={(item) => item.id}

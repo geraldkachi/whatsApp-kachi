@@ -17,14 +17,14 @@ import ChatRoomScreen from "../screens/ChatRoomScreen";
 
 const Stack = createStackNavigator();
 
-export default function AppNavigation() {
+export default function RootNavigation() {
   return (
     <NavigationContainer>
       {/* linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}> */}
       <RootNavigator />
     </NavigationContainer>
-  );
+  )
 }
 
 function RootNavigator() {
