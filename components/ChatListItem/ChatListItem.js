@@ -15,13 +15,13 @@ const ChatListItem = ({ chatRoom }) => {
   // const { chatRoom } = props;
   // onPress={() => navigation.navigate("ChatRoomScreen")}
 
+  const navigation = useNavigation();
+
   const onPressChats = () => {
     navigation.navigate("ChatRoomScreen", { id: chatRoom.id, name: user.name });
   }
 
   const user = chatRoom.users[1];
-
-  const navigation = useNavigation();
 
   return (
     <TouchableWithoutFeedback onPress={onPressChats}>

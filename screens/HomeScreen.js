@@ -12,13 +12,11 @@ const HomeStack = createStackNavigator();
 
 const HomeScreen = () => {
   return (
-    <HomeStack.Navigator>
+    <HomeStack.Navigator headerMode={false}>
       <HomeStack.Screen
         name="TopTab"
         component={TopTabScreen}
-        options={{
-          headerStyle: {},
-        }}
+        options= {{headerShown: false}}
       />
     </HomeStack.Navigator>
   );

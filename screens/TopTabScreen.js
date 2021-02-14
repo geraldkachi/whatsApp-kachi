@@ -18,6 +18,7 @@ const TopTabScreen = () => {
 
   return (
     <Tab.Navigator
+    headerMode={false}
       screenOptions={{
         headerStyle: {
           borderTopColor: Colors.light.tintColorLight,
@@ -26,6 +27,7 @@ const TopTabScreen = () => {
           borderColor: "#0c6157",
           // borderTopWidth: 0,
         },
+        
       }}
       tabBarOptions={{
         activeTintColor: Colors.light.background,
@@ -73,22 +75,22 @@ const StatusStack = createStackNavigator();
 const CallseStack = createStackNavigator();
 
 const CameraStackNavigation = () => (
-  <CameraStack.Navigator>
+  <CameraStack.Navigator headerMode={false}>
     <CameraStack.Screen name="CameraScreen" component={Camera} />
   </CameraStack.Navigator>
 );
 const ChatsStackNavigation = () => (
-  <ChatsStack.Navigator>
+  <ChatsStack.Navigator headerMode={false}>
     <ChatsStack.Screen name="ChatsScreen" component={Chats} />
   </ChatsStack.Navigator>
 );
 const StatusStackStackNavigation = () => (
-  <StatusStack.Navigator>
+  <StatusStack.Navigator headerMode={false}>
     <StatusStack.Screen name="StatusScreen" component={Status} />
   </StatusStack.Navigator>
 );
 const CallseStackStackNavigation = () => (
-  <CallseStack.Navigator>
+  <CallseStack.Navigator headerMode={false}>
     <CallseStack.Screen name="CallsScreen" component={Calls} />
   </CallseStack.Navigator>
 );
