@@ -4,6 +4,7 @@ import { useRoute } from "@react-navigation/native";
 import chattingData from "../data/Chats";
 import ChatMessages from "../components/ChatMessage/ChatMessages";
 import bg from "../assets/images/kachi2.jpg"
+import ChatRoomInputBox from "../components/chatroominputbox/ChatRoomInputBox";
 
 const ChatRoomScreen = () => {
   const route = useRoute();
@@ -20,6 +21,7 @@ const ChatRoomScreen = () => {
       keyExtractor={(item) => item.id}
       inverted
       />
+      <ChatRoomInputBox />
       </ImageBackground>
     </>
   );

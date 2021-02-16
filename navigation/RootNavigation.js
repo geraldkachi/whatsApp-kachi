@@ -14,6 +14,8 @@ import {
   FontAwesome5,
 } from "@expo/vector-icons";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
+import ContactListItem from "../screens/ContactListItem";
+
 
 const Stack = createStackNavigator();
 
@@ -21,7 +23,7 @@ export default function RootNavigation() {
   return (
     <NavigationContainer>
       {/* linking={LinkingConfiguration}
-      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}> */}
+      theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme} > */}
       <RootNavigator />
     </NavigationContainer>
   )
@@ -86,42 +88,23 @@ function RootNavigator() {
         options={({ route }) => ({
           title: route.params.name,
           headerRight: () => (
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                marginRight: 15,
-                width: "100%",
-              }}
-            >
-              <TouchableOpacity
-                style={{ paddingHorizontal: 2 }}
-                onPress={() => {}}
-              >
+            <View style={{ flexDirection: "row", justifyContent: "space-between", marginRight: 15, width: "100%", }} >
+              <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}} >
                 <FontAwesome5 name="video" size={22} color="white" />
               </TouchableOpacity>
               {/*  */}
-              <TouchableOpacity
-                style={{ paddingHorizontal: 2 }}
-                onPress={() => {}}
-              >
+              <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}}>
                 <MaterialIcons name="call" size={22} color="white" />
               </TouchableOpacity>
               {/*  */}
-              <TouchableOpacity
-                style={{ paddingHorizontal: 2 }}
-                onPress={() => {}}
-              >
-                <MaterialCommunityIcons
-                  name="dots-vertical"
-                  size={22}
-                  color="white"
-                />
+              <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}} >
+                <MaterialCommunityIcons name="dots-vertical" size={22} color="white" />
               </TouchableOpacity>
             </View>
           ),
         })}
       />
+      <Stack.Screen name="ChatContacts" component={ContactListItem} />
       <Stack.Screen name="BottomTab" component={BottomTabScreen} />
     </Stack.Navigator>
   );
