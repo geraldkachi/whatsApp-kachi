@@ -26,7 +26,7 @@ const ChatMessages = ({ message }) => {
       </View>
     </View>
   );
-};
+}
 
 
 export default ChatMessages;

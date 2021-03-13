@@ -180,6 +180,49 @@ const ChatRooms = [
       createdAt: "2020-09-25T15:40:00.000Z",
     },
   },
+  {
+    id: "10",
+    users: [
+      {
+        id: "u1",
+        name: "Vadim",
+        imageUri: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
+      },
+      {
+        id: "u11",
+        name: "ikoojo maria",
+        imageUri: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
+        // imageUri: "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
+      },
+    ],
+    lastMessage: {
+      id: "m10",
+      content: "whats do you want",
+      createdAt: "2020-09-25T15:40:00.000Z",
+    },
+  },
+  {
+    id: "11",
+    users: [
+      {
+        id: "u1",
+        name: "Dad",
+        imageUri: "https://i.ibb.co/RvwnBL8/pink-shirt.png",
+        // imageUri: "https://i.ibb.co/RvwnBL8/pink-shirt.png",
+      },
+      {
+        id: "u12",
+        name: "Dad",
+        imageUri: "https://i.ibb.co/RvwnBL8/pink-shirt.png",
+        // imageUri: "https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png",
+      },
+    ],
+    lastMessage: {
+      id: "m11",
+      content: "Dear, what the hell is wrong with you ikoojo?",
+      createdAt: "2020-09-27T15:40:00.000Z",
+    },
+  },
 ];
 
 export default ChatRooms;

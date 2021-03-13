@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {  View, Image ,TouchableOpacity } from "react-native";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -12,9 +12,10 @@ import {
   MaterialCommunityIcons,
   Entypo,
   FontAwesome5,
+  Ionicons
 } from "@expo/vector-icons";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
-import ContactListItem from "../screens/ContactListItem";
+import ContactsScreen from "../screens/ContactsScreen"; 
 
 
 const Stack = createStackNavigator();
@@ -85,8 +86,17 @@ function RootNavigator() {
       <Stack.Screen
         name="ChatRoomScreen"
         component={ChatRoomScreen}
-        options={({ route }) => ({
+        // options={({ route }) => ({
+        options={({ navigation, route }) => ({
           title: route.params.name,
+          // title: () => route.params.name,
+          // headerTitle: navigation => <LogoTitle {...props} />
+          headerBackImage: () => (
+            <View>
+              <Ionicons onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
+              <Image source={{ uri: route.params.imageUri }} />
+            </View>
+          ),
           headerRight: () => (
             <View style={{ flexDirection: "row", justifyContent: "space-between", marginRight: 15, width: "100%", }} >
               <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}} >
@@ -104,7 +114,7 @@ function RootNavigator() {
           ),
         })}
       />
-      <Stack.Screen name="ChatContacts" component={ContactListItem} />
+      <Stack.Screen name="ChatContacts" component={ContactsScreen} />
       <Stack.Screen name="BottomTab" component={BottomTabScreen} />
     </Stack.Navigator>
   );

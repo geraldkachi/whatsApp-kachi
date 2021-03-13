@@ -7,14 +7,14 @@ import { useNavigation } from '@react-navigation/native';
 const FloatMsgBtn = () => {
     const navigation = useNavigation()
 
-    const onPressT0Contact = () => {
+    const onPressToContact = () => {
         navigation.navigate('ChatContacts')
-        console.warn('hits contach screen');
+        console.warn('hits contact screen')
     }
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={onPressT0Contact}>
+            <TouchableOpacity onPress={onPressToContact}>
               <MaterialCommunityIcons name="message-reply-text" size={28} color="white" />
             </TouchableOpacity>
         </View>

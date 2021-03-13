@@ -1,4 +1,4 @@
-export default [
+const users = [
   {
     id: "u1",
     name: "Vadim",
@@ -51,3 +51,4 @@ export default [
     imageUri: "https://i.ibb.co/KV18Ysr/floral-skirt.png",
   },
 ];
+export default users

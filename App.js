@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import RootNavigation from "./navigation/RootNavigation";
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({});
 
 
 
-//  <Stack.Navigator headerMode={false}>
+//  <Stack.Navigator  >
 //     Your screens 
 // </Stack.Navigator>
 
