@@ -9,7 +9,7 @@ import {
 } from "react-native";
 // import { useRoute } from "@react-navigation/native";
 
-const ContactListItem = ({user}) => {
+const ContactListItem = ({ user }) => {
   // const route = useRoute();
   // console.log(route.params);
 
@@ -24,8 +24,8 @@ const ContactListItem = ({user}) => {
           <View style={styles.leftContainer}>
             <Image source={{ uri: user.imageUri }} style={styles.avatar} />
             <View style={styles.midContainer}>
-            </View>
               <Text style={styles.status}>{user.status}</Text>
+            </View>
           </View>
         </View>
       </TouchableWithoutFeedback>

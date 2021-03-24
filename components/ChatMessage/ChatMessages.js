@@ -16,7 +16,7 @@ const ChatMessages = ({ message }) => {
           {
             backgroundColor: isMessage() ? "#DCF8C5" : "white",
             marginLeft: isMessage() ? 50 : 0,
-            marginRight: isMessage() ? 0 : 50,
+            marginRight: isMessage() ? 0 : 50,  
           },
         ]}
       >

@@ -88,9 +88,11 @@ function RootNavigator() {
         component={ChatRoomScreen}
         // options={({ route }) => ({
         options={({ navigation, route }) => ({
-          title: route.params.name,
+          title: route.params.name, image: route.params.imageUri,
+
           // title: () => route.params.name,
           // headerTitle: navigation => <LogoTitle {...props} />
+          headerBackTitleVisible: false,
           headerBackImage: () => (
             <View>
               <Ionicons onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
@@ -114,7 +116,9 @@ function RootNavigator() {
           ),
         })}
       />
-      <Stack.Screen name="ChatContacts" component={ContactsScreen} />
+      <Stack.Screen 
+      options={{}}
+      name="ChatContacts" component={ContactsScreen} />
       <Stack.Screen name="BottomTab" component={BottomTabScreen} />
     </Stack.Navigator>
   );
