@@ -35,6 +35,7 @@ function RootNavigator() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
+          headerBackTitleVisible: false,
           backgroundColor: Colors.light.tint,
           shadowOpacity: 15,
           elevation: 0,
@@ -57,6 +58,7 @@ function RootNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
+          headerBackTitleVisible: false,
           title: "WhatsApp",
           headerRight: () => (
             <View

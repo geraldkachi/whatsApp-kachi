@@ -27,7 +27,7 @@ const ChatListItem = ({ chatRoom }) => {
     });
   }
 
-  const user = chatRoom.users[0];
+  const user = chatRoom.users[1];
   // const user = chatRoom.users[1];
 
   return (

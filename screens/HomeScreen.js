@@ -12,7 +12,7 @@ const HomeStack = createStackNavigator();
 
 const HomeScreen = () => {
   return (
-    <HomeStack.Navigator headerMode={false}>
+    <HomeStack.Navigator headerMode={false} initialRouteName="">
       <HomeStack.Screen
         name="TopTab"
         component={TopTabScreen}

@@ -18,6 +18,7 @@ const TopTabScreen = () => {
 
   return (
     <Tab.Navigator
+    initialRouteName="Chats"
     headerMode={false}
       screenOptions={{
         headerStyle: {
@@ -68,7 +69,7 @@ const TopTabScreen = () => {
     </Tab.Navigator>
   );
 };
-
+g
 const CameraStack = createStackNavigator();
 const ChatsStack = createStackNavigator();
 const StatusStack = createStackNavigator();
