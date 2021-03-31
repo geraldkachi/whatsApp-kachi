@@ -21,12 +21,14 @@ const ChatListItem = ({ chatRoom }) => {
     navigation.navigate("ChatRoomScreen", { 
       id: chatRoom.id, 
       name: user.name,
-      imageUri: user.imageUri
+      // imageUri: user.imageUri or test it first
+      uri: user.imageUri
 
     });
   }
 
-  const user = chatRoom.users[1];
+  const user = chatRoom.users[0];
+  // const user = chatRoom.users[1];
 
   return (
     <TouchableWithoutFeedback onPress={onPressChats}>

@@ -88,10 +88,7 @@ function RootNavigator() {
         component={ChatRoomScreen}
         // options={({ route }) => ({
         options={({ navigation, route }) => ({
-          title: route.params.name, image: route.params.imageUri,
-
-          // title: () => route.params.name,
-          // headerTitle: navigation => <LogoTitle {...props} />
+          title: route.params.name, uri: route.params.imageUri,
           headerBackTitleVisible: false,
           headerBackImage: () => (
             <View>
