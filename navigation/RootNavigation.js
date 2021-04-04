@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import {  View, Image ,TouchableOpacity } from "react-native";
 
-import { NavigationContainer } from "@react-navigation/native";
+import { 
+  NavigationContainer,   
+  DefaultTheme ,
+  DarkTheme  } from "@react-navigation/native";
+
+
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import BottomTabScreen from "../screens/BottomTabScreen";
@@ -18,9 +23,38 @@ import ChatRoomScreen from "../screens/ChatRoomScreen";
 import ContactsScreen from "../screens/ContactsScreen"; 
 
 
+
 const Stack = createStackNavigator();
 
 export default function RootNavigation() {
+
+  const [isDarkTheme , setIsDarkTheme] = useState(false)
+
+  const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme
+
+    const CustomDefaultTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: '#fff',
+      text: '#333333'
+    },
+  }
+
+  const CustomDarkTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: '#333333',
+      text: '#fff'
+    },
+  }
+
+  const authContext = useMemo(() => ({
+
+   }), []);
+
+
   return (
     <NavigationContainer>
       {/* linking={LinkingConfiguration}
@@ -116,7 +150,32 @@ function RootNavigator() {
         })}
       />
       <Stack.Screen 
-      options={{}}
+      options={{
+        headerBackTitleVisible: false,
+        title: "Select contact",
+        headerRight: () => (
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: 60,
+              marginRight: 15,
+            }}
+          >
+            <Octicons
+              name="search"
+              size={22}
+              color={Colors.light.background}
+            />
+            {/* <MaterialCommunityIcons */}
+            <Entypo
+              name="dots-three-vertical"
+              size={22}
+              color={Colors.light.background}
+            />
+          </View>
+        ),
+      }}
       name="ChatContacts" component={ContactsScreen} />
       <Stack.Screen name="BottomTab" component={BottomTabScreen} />
     </Stack.Navigator>
