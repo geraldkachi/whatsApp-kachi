@@ -19,4 +19,3 @@ const Status = ({ navigation }) => {
 export default Status;
 
 const styles = StyleSheet.create({});
-Status;

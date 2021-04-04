@@ -129,7 +129,7 @@ function RootNavigator() {
           headerBackImage: () => (
             <View>
               <Ionicons onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
-              <Image source={{ uri: route.params.imageUri }} />
+              <Image style={{}} source={{ uri: route.params.imageUri }} />
             </View>
           ),
           headerRight: () => (

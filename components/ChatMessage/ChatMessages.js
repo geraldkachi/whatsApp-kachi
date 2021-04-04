@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
   },
-  name : {
+  name: {
     color: Colors.light.tint,
     fontWeight: "bold",
     margingBottom: 5
