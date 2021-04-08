@@ -5,7 +5,7 @@ import {
   View,
   Image,
   TouchableWithoutFeedback,
-  Alert,
+  // Alert,
 } from "react-native";
 // import { useRoute } from "@react-navigation/native";
 

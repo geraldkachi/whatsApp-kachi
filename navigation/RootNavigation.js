@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React from "react";
+// import React, { useState, useMemo } from "react";
 import {  View, Image ,TouchableOpacity } from "react-native";
 
-import { 
-  NavigationContainer,   
-  DefaultTheme ,
-  DarkTheme  } from "@react-navigation/native";
+// import { 
+//   NavigationContainer,   
+//   DefaultTheme ,
+//   DarkTheme  } from "@react-navigation/native";
 
 
 import { createStackNavigator } from "@react-navigation/stack";
@@ -28,31 +29,31 @@ const Stack = createStackNavigator();
 
 export default function RootNavigation() {
 
-  const [isDarkTheme , setIsDarkTheme] = useState(false)
+  // const [isDarkTheme , setIsDarkTheme] = useState(false)
 
-  const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme
+  // const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme
 
-    const CustomDefaultTheme = {
-    ...DefaultTheme,
-    colors: {
-      ...DefaultTheme.colors,
-      background: '#fff',
-      text: '#333333'
-    },
-  }
+  //   const CustomDefaultTheme = {
+  //   ...DefaultTheme,
+  //   colors: {
+  //     ...DefaultTheme.colors,
+  //     background: '#fff',
+  //     text: '#333333'
+  //   },
+  // }
 
-  const CustomDarkTheme = {
-    ...DarkTheme,
-    colors: {
-      ...DarkTheme.colors,
-      background: '#333333',
-      text: '#fff'
-    },
-  }
+  // const CustomDarkTheme = {
+  //   ...DarkTheme,
+  //   colors: {
+  //     ...DarkTheme.colors,
+  //     background: '#333333',
+  //     text: '#fff'
+  //   },
+  // }
 
-  const authContext = useMemo(() => ({
+  // const authContext = useMemo(() => ({
 
-   }), []);
+  //  }), []);
 
 
   return (
