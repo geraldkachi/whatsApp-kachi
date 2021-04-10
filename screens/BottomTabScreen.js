@@ -54,7 +54,7 @@ const BottomTabScreen = () => (
         tabBarLabel: "Home",
         tabBarColor: "blue",
         tabBarIcon: ({ focused }) => (
-          <View style={{ justifyContent: 'center', alignItems:'center', top: 10}}>
+          <View style={styles.iconview}>
             <Octicons name="home" size={24} color="blue" />
             <Text style={{color: focused ? "#e32f45" : "#748c94"}}>Home</Text>
           </View>
@@ -68,7 +68,7 @@ const BottomTabScreen = () => (
         tabBarLabel: "Home",
         tabBarColor: "blue",
         tabBarIcon: ({focused}) =>  (
-        <View style={{ justifyContent: 'center', alignItems:'center', top: 10}}>
+        <View style={styles.iconview}>
           <Octicons name="search" size={22} style={{color: focused ? "blue" : "#748c94"}}  />
           <Text style={{color: focused ? "#e32f45" : "#748c94"}}>Search</Text>
         </View>
@@ -92,7 +92,7 @@ const BottomTabScreen = () => (
         tabBarLabel: "Notification",
         tabBarColor: "blue",
         tabBarIcon: ({focused}) => (
-          <View style={{ justifyContent: 'center', alignItems:'center', top: 10}}>
+          <View style={styles.iconview}>
             <MaterialIcons name="notifications-none" size={28} style={{color: focused ? "blue" : "#748c94"}}  />
             <Text style={{color: focused ? "#e32f45" : "#748c94"}}>Notification</Text>
           </View>
@@ -107,7 +107,7 @@ const BottomTabScreen = () => (
         tabBarLabel: "Message",
         tabBarColor: "blue",
         tabBarIcon: ({focused}) => (
-          <View style={{ justifyContent: 'center', alignItems:'center', top: 10}}>
+          <View style={styles.iconview}>
             <SimpleLineIcons name="envelope" size={24} color="blue" />
             <Text style={{color: focused ? "blue" : "#748c94"}}>Message</Text>
           </View>
@@ -129,6 +129,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.5,
     elevation: 5
+},
+iconview: {
+  justifyContent: 'center', alignItems:'center', top: 10
 }
 });
 
