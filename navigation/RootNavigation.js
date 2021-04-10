@@ -1,5 +1,4 @@
-import React from "react";
-// import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import {  View, Image ,TouchableOpacity } from "react-native";
 
 import { 
@@ -29,31 +28,31 @@ const Stack = createStackNavigator();
 
 export default function RootNavigation() {
 
-  // const [isDarkTheme , setIsDarkTheme] = useState(false)
+  const [isDarkTheme , setIsDarkTheme] = React.useState(false)
 
-  // const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme
+  const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme
 
-  //   const CustomDefaultTheme = {
-  //   ...DefaultTheme,
-  //   colors: {
-  //     ...DefaultTheme.colors,
-  //     background: '#fff',
-  //     text: '#333333'
-  //   },
-  // }
+    const CustomDefaultTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: '#fff',
+      text: '#333333'
+    },
+  }
 
-  // const CustomDarkTheme = {
-  //   ...DarkTheme,
-  //   colors: {
-  //     ...DarkTheme.colors,
-  //     background: '#333333',
-  //     text: '#fff'
-  //   },
-  // }
+  const CustomDarkTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: '#333333',
+      text: '#fff'
+    },
+  }
 
-  // const authContext = useMemo(() => ({
+  const authContext = useMemo(() => ({
 
-  //  }), []);
+   }), []);
 
 
   return (
@@ -70,7 +69,7 @@ function RootNavigator() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          headerBackTitleVisible: false,
+          // headerBackTitleVisible: false,
           backgroundColor: Colors.light.tint,
           shadowOpacity: 15,
           elevation: 0,
@@ -93,7 +92,7 @@ function RootNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
-          headerBackTitleVisible: false,
+          // headerBackTitleVisible: false,
           title: "WhatsApp",
           headerRight: () => (
             <View
@@ -126,7 +125,7 @@ function RootNavigator() {
         // options={({ route }) => ({
         options={({ navigation, route }) => ({
           title: route.params.name, uri: route.params.imageUri,
-          headerBackTitleVisible: false,
+          // headerBackTitleVisible: false,
           headerBackImage: () => (
             <View>
               <Ionicons onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
@@ -152,7 +151,7 @@ function RootNavigator() {
       />
       <Stack.Screen 
       options={{
-        headerBackTitleVisible: false,
+        // headerBackTitleVisible: false,
         title: "Select contact",
         headerRight: () => (
           <View
