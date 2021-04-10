@@ -2,10 +2,10 @@ import React from "react";
 // import React, { useState, useMemo } from "react";
 import {  View, Image ,TouchableOpacity } from "react-native";
 
-// import { 
-//   NavigationContainer,   
-//   DefaultTheme ,
-//   DarkTheme  } from "@react-navigation/native";
+import { 
+  NavigationContainer,   
+  DefaultTheme ,
+  DarkTheme  } from "@react-navigation/native";
 
 
 import { createStackNavigator } from "@react-navigation/stack";
