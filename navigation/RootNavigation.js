@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import {  View, Image ,TouchableOpacity } from "react-native";
+import {  View, Image ,TouchableOpacity, Text } from "react-native";
 
 import { 
   NavigationContainer,   
@@ -125,11 +125,19 @@ function RootNavigator() {
         // options={({ route }) => ({
         options={({ navigation, route }) => ({
           title: route.params.name, uri: route.params.imageUri,
-          // headerBackTitleVisible: false,
+          headerBackTitleVisible: false,
+          // headerBackground: () => (
+          //   <Image
+          //     style={{ height: 200}}
+          //     source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg' }}
+          //   />
+          // ),
           headerBackImage: () => (
-            <View>
-              <Ionicons onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
-              <Image style={{}} source={{ uri: route.params.imageUri }} />
+            <View style={{ flexDirection:'row' }}>
+              <Ionicons style={{alignSelf:'center'}} onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
+              <Image style={{margin:5, width: 30, height:30, borderRadius: 15, alignSelf:'center', margin: 20 }} source={{ uri: route.params.uri }} />
+              <Text style={{padding: 10, color:'white', marginHorizontal: 30}}>{console.log(`route.params.name`, route.params.name)}</Text> 
+              {/* <Text style={{padding: 10}}>{console.log(`route.params.name`, route.params.uri)}</Text> */}
             </View>
           ),
           headerRight: () => (
@@ -181,3 +189,11 @@ function RootNavigator() {
     </Stack.Navigator>
   );
 }
+
+
+const ChatRoomHeader = (props) => (
+  <View style={{ flexDirection:'row' }}>
+     <Image style={{ width:30, height:30, borderRadius:30}} source={{ uri: route.params.imageUri }} />
+    <Text></Text>
+  </View>
+)

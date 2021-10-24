@@ -10,7 +10,6 @@ const chattingData = {
     {
       id: "u2",
       name: "Kachi",
-      //   name: "Lukas",
       imageUri: "https://twitter.com/KachiFitzgerald/photo",
     },
   ],

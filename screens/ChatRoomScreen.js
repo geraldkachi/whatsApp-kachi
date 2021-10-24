@@ -19,7 +19,7 @@ const ChatRoomScreen = () => {
       style={styles.container}
       data={chattingData.messages}
       renderItem={({ item }) => <ChatMessages message={item} /> }
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item) => String(item.id)}
       inverted
       />
       <ChatRoomInputBox />

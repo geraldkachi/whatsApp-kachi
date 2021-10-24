@@ -43,7 +43,7 @@ const ChatRoomInputBox = () => {
         <Entypo name="attachment" size={24} color="grey" style={styles.icon} />
        {!message && <Fontisto name="camera" size={24} color="grey" style={styles.icon} />}
       </View>
-      <TouchableOpacity style={{ alignItems:'flex-end'}}>
+      <TouchableOpacity style={{ justifyContent: "flex-end", alignItems: "flex-end", }}>
       <View style={styles.buttonContainer}>
           {!message ? (<MaterialCommunityIcons onPress={onPress} name="microphone" size={24} color="white" />) :
           (<MaterialIcons onPress={onPress} name="send" size={24} color="white" />)
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginRight: 10,
     borderRadius: 25,
-    alignItems: "center"
+    alignItems: "flex-end",
+    // alignItems: "center"  // initially 
     // alignItems: 10  what caused an error since.... this is why typescript is better
   },
   textInput: {
