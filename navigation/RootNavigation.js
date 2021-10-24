@@ -135,7 +135,7 @@ function RootNavigator() {
           headerBackImage: () => (
             <View style={{ flexDirection:'row' }}>
               <Ionicons style={{alignSelf:'center'}} onPress={() => navigation.goBack()} name="arrow-back" size={22} color="white" />
-              <Image style={{margin:5, width: 30, height:30, borderRadius: 15, alignSelf:'center', margin: 20 }} source={{ uri: route.params.uri }} />
+              <Image style={{margin:5, width: 30, height:30, borderRadius: 15, alignSelf:'center' }} source={{ uri: route.params.uri }} />
               {/* <Text style={{padding: 10, color:'white', marginHorizontal: 30}}>{console.log(`route.params.name`, route.params.name)}</Text>  */}
               {/* <Text style={{padding: 10}}>{console.log(`route.params.name`, route.params.uri)}</Text> */}
             </View>
