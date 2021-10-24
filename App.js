@@ -10,7 +10,7 @@ const App = () => {
   const changeStatusBarVisibility = () => setHidden(!hidden)
   return(
     <>
-    <StatusBar animated={true} hidden={hidden} barStyle="light-content" StatusBarStyle="light-content" />
+    <StatusBar animated={true} hidden={hidden} style="light" barStyle="light-content" StatusBarStyle="light-content" />
      <RootNavigation /> 
      </>
     );

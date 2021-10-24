@@ -35,15 +35,15 @@ const ChatRoomInputBox = () => {
       <View style={styles.mainContainer}>
         <FontAwesome5 name="laugh-beam" size={24} color="grey" />
         <TextInput 
-        value={message} 
-        multiline 
-        placeholder="Type a message"
-        onChangeText={setmessage}
-        style={styles.textInput} />
+          value={message} 
+          multiline 
+          placeholder="Type a message"
+          onChangeText={setmessage}
+          style={styles.textInput} />
         <Entypo name="attachment" size={24} color="grey" style={styles.icon} />
        {!message && <Fontisto name="camera" size={24} color="grey" style={styles.icon} />}
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity style={{ alignItems:'flex-end'}}>
       <View style={styles.buttonContainer}>
           {!message ? (<MaterialCommunityIcons onPress={onPress} name="microphone" size={24} color="white" />) :
           (<MaterialIcons onPress={onPress} name="send" size={24} color="white" />)
