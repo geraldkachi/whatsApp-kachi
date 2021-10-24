@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginRight: 10,
     borderRadius: 25,
-    alignItems: 10
+    alignItems: "center"
+    // alignItems: 10  what caused an error since.... this is why typescript is better
   },
   textInput: {
     flex: 1,

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   name: {
     color: Colors.light.tint,
     fontWeight: "bold",
-    margingBottom: 5
+    marginBottom: 5
   },
   time: {
     alignSelf: "flex-end",

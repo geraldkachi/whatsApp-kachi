@@ -13,7 +13,7 @@ const ChatRoomScreen = () => {
 
   return (
     <>
-    <ImageBackground style={{flex: 1, width: '100', height:'100%'}} source={bg}>
+    <ImageBackground style={{flex: 1, width: '100%', height:'100%'}} source={bg}>
 
     <FlatList
       style={styles.container}

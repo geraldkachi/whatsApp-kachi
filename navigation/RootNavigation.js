@@ -137,11 +137,11 @@ function RootNavigator() {
               <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}} >
                 <FontAwesome5 name="video" size={22} color="white" />
               </TouchableOpacity>
-              {/*  */}
+              
               <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}}>
                 <MaterialIcons name="call" size={22} color="white" />
               </TouchableOpacity>
-              {/*  */}
+              
               <TouchableOpacity style={{ paddingHorizontal: 2 }} onPress={() => {}} >
                 <MaterialCommunityIcons name="dots-vertical" size={22} color="white" />
               </TouchableOpacity>
@@ -167,7 +167,7 @@ function RootNavigator() {
               size={22}
               color={Colors.light.background}
             />
-            {/* <MaterialCommunityIcons */}
+            
             <Entypo
               name="dots-three-vertical"
               size={22}

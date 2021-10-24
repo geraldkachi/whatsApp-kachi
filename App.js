@@ -1,10 +1,19 @@
 import 'react-native-gesture-handler';
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import RootNavigation from "./navigation/RootNavigation";
+import { StatusBar } from 'expo-status-bar';
 
 const App = () => {
-  return <RootNavigation />;
+
+  const [hidden, setHidden] = useState(false);
+  const changeStatusBarVisibility = () => setHidden(!hidden)
+  return(
+    <>
+    <StatusBar animated={true} hidden={hidden} barStyle="light-content" StatusBarStyle="light-content" />
+     <RootNavigation /> 
+     </>
+    );
 };
 
 export default App;

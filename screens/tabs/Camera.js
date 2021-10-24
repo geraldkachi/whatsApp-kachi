@@ -8,9 +8,11 @@ const Camera = () => {
 export default Camera;
 
 const styles = StyleSheet.create({
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  }
 });
 
 // import Camera from "react-native-camera";
