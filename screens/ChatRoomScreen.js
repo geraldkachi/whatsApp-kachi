@@ -9,7 +9,8 @@ import ChatRoomInputBox from "../components/chatroominputbox/ChatRoomInputBox";
 const ChatRoomScreen = () => {
 
   const route = useRoute();
-  // console.log(route.params);
+  console.log(route.params, "route.para,s");
+  console.log(route, "route.paras");
 
   return (
     <>
